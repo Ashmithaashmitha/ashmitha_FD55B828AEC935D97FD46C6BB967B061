@@ -1,0 +1,54 @@
+class BankAccount:
+
+def 
+initial(self,account_number,account_holder_name,initial_balance=0.0):
+   
+self.__account_number = account_number
+   
+self.__account_holder = account_holder_name
+   
+self.__account_balance = initial_balance
+  
+def deposit(self,amount):
+    
+if amount>0:
+      
+self.__account_balance += amount
+      
+print("Deposit Rs.{}. Now balance: Rs.{}".format(amount,self.__account_balance))
+    
+else:
+      
+print("Invalid deposit")
+  
+def withdraw(self,amount):
+    
+if amount>0 and amount<=self.__account_balance:
+      
+self.__account_balance -= amount
+      
+print("Withdraw Rs.{}. Now balance: Rs.{}".format(amount,self.__account_balance))
+    
+else:
+      
+print("Invalid withdraw or amount insufficient")
+  
+  
+def display(self):
+    
+print("Account Holder:{}.Account Number={}. Account Balance:{}".format(self.__account_holder_name,self.__account_number,self.__account_balance))
+    
+
+account = BankAccount()
+    
+
+account.initial(account_number="6496458799",account_holder_name="Ashmitha",initial_balance=5555.0)
+
+account.display()
+
+account.deposit(2000)
+
+account.withdraw(1000)
+
+account.display()
+    
